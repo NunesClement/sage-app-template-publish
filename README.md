@@ -23,7 +23,7 @@ python3 -m pip install --requirement requirements.txt
 python3 -m unittest -v
 ```
 
-The application uses the tutorial's Sage node camera alias `left`. Run the camera integration test on a Sage node; local unit tests mock the camera and publication interfaces.
+The application uses this Sage node's verified still-camera identifier `bottom_image`. Run the camera integration test on the Sage node; local unit tests mock the camera and publication interfaces.
 
 ## Sage node test (run on an assigned node)
 
@@ -37,7 +37,7 @@ sudo pluginctl build .
 sudo pluginctl run --name sage-app-template-publish <image-reference-printed-by-build>
 ```
 
-The installed `pluginctl --help` output is authoritative if the node's syntax differs. The tutorial notes that camera names are node-specific, so `left` may not exist on every node.
+The installed `pluginctl --help` output is authoritative if the node's syntax differs. The tutorial notes that camera names are node-specific; this node reports `bottom_image` for its bottom still-image source.
 
 ## ECR publication
 
