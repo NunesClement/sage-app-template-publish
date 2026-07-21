@@ -1,0 +1,13 @@
+name: "sage-app-template-publish"
+version: "0.1.0"
+description: "Capture a camera frame, publish its mean RGB values, and upload the frame."
+keywords: ""
+authors: "Clément Nunes"
+collaborators: ""
+funding: ""
+license: ""
+homepage: "https://github.com/clementnunes/sage-app-template-publish"
+source:
+  architectures:
+    - "linux/amd64"
+    - "linux/arm64"

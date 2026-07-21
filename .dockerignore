@@ -1,0 +1,10 @@
+.DS_Store
+.git
+.gitignore
+.venv
+__pycache__
+*.py[cod]
+.pytest_cache
+test-run
+test_main.py
+ecr-meta
