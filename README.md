@@ -23,21 +23,7 @@ python3 -m pip install --requirement requirements.txt
 python3 -m unittest -v
 ```
 
-For a camera smoke test, use a local camera index such as `0`:
-
-```sh
-PYWAGGLE_LOG_DIR=test-run SAGE_CAMERA=0 python3 main.py
-```
-
-For an offline smoke test, point the camera adapter at the ECR science image:
-
-```sh
-PYWAGGLE_LOG_DIR=test-run SAGE_CAMERA=ecr-meta/ecr-science-image.jpg python3 main.py
-```
-
-Published records are appended to `test-run/data.ndjson`, and the uploaded snapshot is copied under `test-run/uploads/`. These generated paths are ignored by Git.
-
-`--camera` defaults to the node camera alias `left`, and `--snapshot-path` defaults to `/tmp/snapshot.jpg`. Camera aliases are node-specific. The `SAGE_CAMERA` and `SAGE_SNAPSHOT_PATH` environment variables provide the same settings.
+The application uses the Sage node camera alias `left`, matching the tutorial's node-specific correction. Run the camera integration test on a Sage node; local unit tests mock the camera and publication interfaces.
 
 ## Sage node test (run on an assigned node)
 
@@ -48,10 +34,10 @@ The Dockerfile currently uses the official cookiecutter's NVIDIA Jetson Xavier t
 ```sh
 sudo pluginctl --help
 sudo pluginctl build .
-sudo pluginctl run --name sage-app-template-publish <image-reference-printed-by-build> -- --camera left
+sudo pluginctl run --name sage-app-template-publish <image-reference-printed-by-build>
 ```
 
-The installed `pluginctl --help` output is authoritative if the node's syntax differs. Replace `left` with the camera alias exposed by that node.
+The installed `pluginctl --help` output is authoritative if the node's syntax differs. The hard-coded `left` alias must be changed in `main.py` if the node exposes a different camera name.
 
 ## ECR publication
 
