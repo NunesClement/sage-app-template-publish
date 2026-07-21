@@ -29,7 +29,7 @@ The application uses the Sage node camera alias `left`, matching the tutorial's 
 
 Do not install the Python requirements directly on a Sage node. Clone this repository there and use the node's `pluginctl` container workflow:
 
-The Dockerfile currently uses the official cookiecutter's NVIDIA Jetson Xavier tutorial base (`waggle/plugin-base:1.1.1-ml`). Confirm the development node model before building. Jetson Thor nodes require the Thor base selected by the current cookiecutter; the CPU architectures listed in `sage.yaml` do not make the JetPack-specific bases interchangeable.
+The Dockerfile uses the current official cookiecutter's NVIDIA Jetson Thor tutorial base (`waggle/sage-thor-base:0.1.0`). The CPU architectures listed in `sage.yaml` do not make Xavier and Thor's JetPack-specific bases interchangeable.
 
 ```sh
 sudo pluginctl --help

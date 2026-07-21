@@ -6,7 +6,7 @@ authors: "Clément Nunes"
 collaborators: ""
 funding: ""
 license: ""
-homepage: "https://github.com/clementnunes/sage-app-template-publish"
+homepage: "https://github.com/NunesClement/sage-app-template-publish"
 source:
   architectures:
     - "linux/amd64"

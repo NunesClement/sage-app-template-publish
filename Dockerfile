@@ -1,4 +1,4 @@
-FROM waggle/plugin-base:1.1.1-ml
+FROM waggle/sage-thor-base:0.1.0
 
 WORKDIR /app
 
