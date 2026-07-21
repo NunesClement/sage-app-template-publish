@@ -32,7 +32,7 @@ class AppTests(unittest.TestCase):
 
         main.main()
 
-        camera_class.assert_called_once_with("bottom_image")
+        camera_class.assert_called_once_with("left")
         plugin.publish.assert_has_calls(
             [
                 call("color.mean.r", 2.0, timestamp=123456789),
